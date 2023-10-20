@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool on-off switch</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      background-color: rgb(0, 0, 0) ;
+      font-family: Arial, Helvetica, sans-serif ;
+    }
+
+    input {
+      appearance: none ;
+      background-color: rgb(255, 255, 0) ; 
+      width: 180px ;
+      height: 70px ;
+      border-radius: 60px ;
+      cursor: pointer ;
+    }
+
+    input::before {
+      content: '' ;
+      position: absolute ;
+      top: 15% ;
+      right: 10% ;
+      width: 50px ;
+      height: 50px ;
+      background-color: rgb(83, 0, 0) ;
+      border-radius: 25px ;
+      transition: right 0.4s ;
+    }
+
+    input:checked {
+      background-color: rgb(83, 0, 0) ;
+    }
+
+    input:checked::before {
+      right: 65% ;
+      background-color: rgb(255, 255, 0) ;
+    }
+
+    #container {
+      position: relative ;
+    }
+
+    #on-off-text {
+      position: absolute ;
+      right: 15% ;
+      top: 25% ;
+      color: rgb(255, 255, 0) ;
+      font-size: 30px ;
+      font-weight: bold ;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <input type="checkbox" checked>
+    <div id="on-off-text">ON</div>
+  </div>
+
+  <script>
+    const input = document.querySelector('input') ;
+    const onOffText = document.getElementById('on-off-text') ;
+
+    let inputClicked = false ;
+
+    input.addEventListener('click', () => {
+      if (!inputClicked) {
+        inputClicked = true ;
+        onOffText.style.right = '60%' ;
+        onOffText.style.color = 'rgb(83, 0, 0)' ;
+        onOffText.innerHTML = 'OFF' ;
+      } else {
+        inputClicked = false ;
+        onOffText.style.right = '15%' ;
+        onOffText.style.color = 'rgb(255, 255, 0)' ;
+        onOffText.innerHTML = 'ON' ;
+      }
+    }) ;
+  </script>
+</body>
+</html>

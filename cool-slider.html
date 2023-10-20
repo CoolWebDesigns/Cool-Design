@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Slider</title>
+
+  <style>
+    body {
+      background-color: rgb(255, 0, 0) ;
+    }
+
+    #slider {
+      width: 300px ;
+      height: 20px ;
+      background: #ccc ;
+      position: relative ;
+      border-radius: 10px ;
+      margin: 50px auto ;
+    }
+
+    #slider #slider-handle {
+      width: 30px ;
+      height: 30px ;
+      background: #000000 ;
+      position: absolute ;
+      top: -5px ;
+      border-radius: 50% ;
+      cursor: pointer ;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s ;
+    }
+
+    #slider #slider-handle:hover {
+      background: #3e0101 ;
+      transform: scale(1.2) ;
+      box-shadow: 0 0 15px rgba(0 ,0, 0, 0.7) ;
+    }
+  </style>
+</head>
+<body>
+  <div id="slider">
+    <div id="slider-handle">
+
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider') ;
+    const handle = document.getElementById('slider-handle') ;
+
+    let isDragging = false ;
+
+    handle.addEventListener('mousedown', () => {
+      isDragging = true ;
+    }) ;
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return ;
+      const sliderRect = slider.getBoundingClientRect() ;
+      const newX = e.clientX - sliderRect.left ;
+
+      if (newX >= 0 && newX <= sliderRect.width) {
+        handle.style.left = newX + 'px' ;
+      }
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false ;
+      }) ;
+    }) ;
+  </script>
+</body>
+</html>

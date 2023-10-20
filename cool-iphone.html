@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool iPhone</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      overflow: hidden ;
+      font-family: Arial, Helvetica, sans-serif ;
+      background-color: rgb(255, 0, 0) ;
+    }
+
+    #phone {
+      display: flex ;
+      flex-direction: column ;
+      background-color: rgb(0, 0, 0) ;
+      height: 190px ;
+      width: 80px ;
+      border-radius: 10px ;
+      border: 2px solid rgb(160, 160, 160) ;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5) ;
+    }
+
+    #upper-phone {
+      display: flex ;
+      justify-content: space-between ;
+      padding: 8px 0 ;
+      margin: 0 10px ;
+    }
+
+    .dot {
+      width: 8px ;
+      height: 8px ;
+      border-radius: 50% ;
+    }
+
+    #dot1 {
+      background-color: rgb(255, 0, 0) ;
+    }
+
+    #dot2 {
+      background-color: rgb(0, 255, 0) ;
+    }
+
+    #dot3 {
+      background-color: rgb(0, 0, 255) ;
+    }
+
+    #phone-screen {
+      display: grid ;
+      grid-template-columns: 1fr 1fr ;
+      grid-column-gap: 5px ;
+      grid-row-gap: 15px ;
+      padding: 4px 8px 8px 8px ;
+      margin: 0 8px ;
+      border: 1px solid rgb(160, 160, 160) ;
+      background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 0, 255)) ;
+    }
+
+    .app {
+      display: flex ;
+      flex-direction: column ;
+      align-items: center ;
+      width: 20px ;
+      height: 20px ;
+      color: rgb(255, 255, 255) ;
+      font-size: 5px ;
+      cursor: pointer ;
+    }
+
+    .app-image {
+      width: 18px ;
+      margin-bottom: 2px ;
+    }
+
+    #apple-icon-div {
+      display: flex ;
+      justify-content: center ;
+      padding-top: 3px ;
+    }
+
+    #apple-icon {
+      width: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="phone">
+    <div id="upper-phone">
+      <div id="dot1" class="dot">
+
+      </div>
+
+      <div id="dot2" class="dot">
+
+      </div>
+
+      <div id="dot3" class="dot">
+        
+      </div>
+    </div>
+
+    <div id="phone-screen">
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-268-721990.png" alt="youtube-icon" class="app-image">
+
+        <div>
+          YouTube
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/discord-2752210-2285027.png" alt="discord-icon" class="app-image">
+
+        <div>
+          Discord
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-262-721949.png" alt="facebook-icon" class="app-image">
+
+        <div>
+          Facebook
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/instagram-2752153-2284970.png" alt="instagram-icon" class="app-image">
+
+        <div>
+          Instagram
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/whatsapp-2752026-2284843.png" alt="whatsapp-icon" class="app-image">
+
+        <div>
+          WhatsApp
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-9420782-7651212.png" alt="x-icon" class="app-image">
+
+        <div>
+          X
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/telegram-2752057-2284874.png?f=webp&w=128" alt="telegram-icon" class="app-image">
+
+        <div>
+          Telegram
+        </div>
+      </div>
+
+      <div class="app">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/tiktok-2752055-2284872.png" alt="tiktok-icon" class="app-image">
+
+        <div>
+          TikTok
+        </div>
+      </div>
+    </div>
+
+    <div id="apple-icon-div">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/free-apple-316-226435.png" alt="apple-icon" id="apple-icon">
+    </div>
+  </div>
+</body>
+</html>

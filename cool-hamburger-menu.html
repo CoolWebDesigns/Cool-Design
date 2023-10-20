@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Hamburger Menu</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      background-color: rgb(0, 0, 0) ;
+    }
+
+    #svg-menu {
+      cursor: pointer ;
+    }
+  </style>
+</head>
+<body>
+  <svg width="30" height="20" stroke="rgb(255, 255, 255)" stroke-width="2" id="svg-menu">
+    <path d="M0,3 L30,3" id="first-stroke" />
+    <path d="M0,10 L30,10" id="second-stroke" />
+    <path d="M0,17 L30,17" id="third-stroke" />
+  </svg>
+
+  <script>
+    const svgMenu = document.getElementById('svg-menu') ;
+    const firstStroke = document.getElementById('first-stroke') ;
+    const secondStroke = document.getElementById('second-stroke') ;
+    const thirdStroke = document.getElementById('third-stroke') ;
+
+    let isMenuClicked = false ;
+
+    firstStroke.style.transition = 'd 0.35s' ;
+    secondStroke.style.transition = 'opacity 0.35s' ;
+    thirdStroke.style.transition = 'd 0.35s' ;
+
+    svgMenu.addEventListener('click', () => {
+      if (!isMenuClicked) {
+        isMenuClicked = true ;
+
+        firstStroke.style.d = 'path("M6,3 24,17")' ;
+        secondStroke.style.opacity = 0 ;
+        thirdStroke.style.d = 'path("M6,17 24,3")' ;
+      } else {
+        isMenuClicked = false ;
+
+        firstStroke.style.d = 'path("M0,3 30,3")' ;
+        secondStroke.style.opacity = 1 ;
+        thirdStroke.style.d = 'path("M0,17 30,17")' ;
+      }
+    }) ;
+  </script>
+</body>
+</html>

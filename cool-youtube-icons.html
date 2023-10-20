@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool youtube icons</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      font-family: Arial, Helvetica, sans-serif ;
+      background-color: rgb(255, 0, 0) ;
+    }
+
+    img {
+      height: 40px ;
+    }
+
+    button {
+      cursor: pointer ;
+      border: 0 ;
+    }
+
+    #subscribe-button {
+      background-color: rgb(0, 0, 0) ;
+      color: rgb(255, 255, 255) ;
+      padding: 10px ;
+      font-size: 20px ;
+      font-weight: bold ;
+      border-radius: 20px ;
+    }
+
+    #like-button,
+    #comment-button {
+      border-radius: 30px ;
+      height: 60px ;
+      width: 60px ;
+      margin-left: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <button id="subscribe-button">
+    SUBSCRIBE
+  </button>
+
+  <button id="like-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/739/739282.png" id="like-image">
+  </button>
+
+  <button id="comment-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" id="comment-image">
+  </button>
+
+  <script>
+    const subscribeButton = document.getElementById('subscribe-button') ;
+    const likeButton = document.getElementById('like-button') ;
+    const likeImage = document.getElementById('like-image') ;
+    const commentButton = document.getElementById('comment-button') ;
+    const commentImage = document.getElementById('comment-image') ;
+
+    subscribeButton.addEventListener('click', () => {
+      subscribeButton.style.backgroundColor = 'rgb(255, 255, 255)' ;
+      subscribeButton.style.color = 'rgb(0, 0, 0)' ;
+      subscribeButton.innerHTML = 'SUBSCRIBED' ;
+    }) ;
+
+    likeButton.addEventListener('click', () => {
+      likeImage.src = 'https://cdn-icons-png.flaticon.com/512/739/739231.png' ;
+    }) ;
+
+    commentButton.addEventListener('click', () => {
+      commentImage.src = 'https://cdn-icons-png.flaticon.com/512/1381/1381635.png' ;
+    }) ;
+  </script>
+</body>
+</html>

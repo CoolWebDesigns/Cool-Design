@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool loading bar</title>
+  
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      flex-direction: column ;
+      height: 100vh ;
+      font-family: Arial, Helvetica, sans-serif ;
+    }
+
+    #jumping-letters-container {
+      display: flex ;
+      color: yellow ;
+      font-size: 70px ;
+      font-weight: 900 ;
+    }
+
+    .jumping-letter {
+      animation: jump 1.5s infinite ;
+      animation-delay: calc(0.5s * var(--delay)) ;
+    }
+
+    @keyframes jump {
+      0%, 100% {
+        transform: translateY(0) ;
+      }
+
+      50% {
+        transform: translateY(-16%) ;
+      }
+    }
+
+    #loader {
+      background-color: rgba(0, 0, 0, 0.2) ;
+      width: 400px ;
+      padding: 10px ;
+      border-radius: 5px ;
+      text-align: center ;
+    }
+
+    #filter {
+      background-color: rgb(255, 255, 255) ;
+      width: 0 ;
+      height: 20px ;
+      border-radius: 5px ;
+      margin-bottom: 10px ;
+      transition: width 0.5s ;
+    }
+
+    #percentage {
+      font-size: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="jumping-letters-container">
+    <div class="jumping-letter" style="--delay: 0">L</div>
+    <div class="jumping-letter" style="--delay: 1">o</div>
+    <div class="jumping-letter" style="--delay: 2">a</div>
+    <div class="jumping-letter" style="--delay: 3">d</div>
+    <div class="jumping-letter" style="--delay: 4">i</div>
+    <div class="jumping-letter" style="--delay: 5">n</div>
+    <div class="jumping-letter" style="--delay: 6">g</div>
+    <div class="jumping-letter" style="--delay: 7">.</div>
+    <div class="jumping-letter" style="--delay: 8">.</div>
+    <div class="jumping-letter" style="--delay: 9">.</div>
+  </div>
+
+  <div id="loader">
+    <div id="filter">
+
+    </div>
+
+    <div id="percentage">
+
+    </div>
+  </div>
+
+  <script>
+    const filter = document.getElementById('filter') ;
+    const percentage = document.getElementById('percentage') ;
+
+    let progress = 0 ;
+
+    const interval = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(interval) ;
+      } else {
+        progress++ ;
+        filter.style.width = progress + '%' ;
+        percentage.innerHTML = progress + '%' ;
+      }
+    }, 50) ;
+  </script>
+</body>
+</html>
