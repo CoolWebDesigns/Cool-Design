@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Solar System</title>
+
+  <style>
+    body, html {
+      margin: 0 ;
+      height: 100vh ;
+      overflow: hidden ;
+      background-color: rgb(0, 0, 0) ;
+    }
+
+    #sun {
+      position: absolute ;
+      width: 30px ;
+      height: 30px ;
+      background: #FFD700 ;
+      border-radius: 50% ;
+      top: 50% ;
+      left: 50% ;
+      transform: translate(-50%, -50%) ;
+    }
+
+    .orbiting {
+      position: absolute ;
+      border-radius: 50% ;
+    }
+
+    #mercury {
+      animation: orbitMercury 2s linear infinite ;
+      background: #8C8C8C ;
+      width: 8px ;
+      height: 8px ;
+    }
+
+    @keyframes orbitMercury {
+      from {
+        transform: rotate(0deg) translateX(50px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg) ;
+      }
+    }
+
+    #venus {
+      animation: orbitVenus 4s linear infinite ;
+      background: #C97D50 ;
+      width: 12px ;
+      height: 12px ;
+    }
+
+    @keyframes orbitVenus {
+      from {
+        transform: rotate(0deg) translateX(70px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(70px) rotate(-360deg) ;
+      }
+    }
+
+    #earth {
+      animation: orbitEarth 6s linear infinite ;
+      background: #3B5998 ;
+      width: 14px ;
+      height: 14px ;
+    }
+
+    @keyframes orbitEarth {
+      from {
+        transform: rotate(0deg) translateX(120px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg) ;
+      }
+    }
+
+    #mars {
+      animation: orbitMars 9s linear infinite ;
+      background: #C1440E ;
+      width: 10px ;
+      height: 10px ;
+    }
+
+    @keyframes orbitMars {
+      from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg) ;
+      }
+    }
+
+    #jupiter {
+      animation: orbitJupiter 30s linear infinite ;
+      background: #E4C297 ;
+      width: 30px ;
+      height: 30px ;
+    }
+
+    @keyframes orbitJupiter {
+      from {
+        transform: rotate(0deg) translateX(180px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(180px) rotate(-360deg) ;
+      }
+    }
+
+    #saturn {
+      animation: orbitSaturn 65s linear infinite ;
+      background: #C97D50 ;
+      width: 28px ;
+      height: 28px ;
+    }
+
+    @keyframes orbitSaturn {
+      from {
+        transform: rotate(0deg) translateX(210px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(210px) rotate(-360deg) ;
+      }
+    }
+
+    #uranus {
+      animation: orbitUranus 180s linear infinite ;
+      background: #76A9D1 ;
+      width: 18px ;
+      height: 18px ;
+    }
+
+    @keyframes orbitUranus {
+      from {
+        transform: rotate(0deg) translateX(250px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg) ;
+      }
+    }
+
+    #neptune {
+      animation: orbitNeptune 350s linear infinite ;
+      background: #5474A3 ;
+      width: 16px ;
+      height: 16px ;
+    }
+
+    @keyframes orbitNeptune {
+      from {
+        transform: rotate(0deg) translateX(300px) rotate(0deg) ;
+      }
+
+      to {
+        transform: rotate(360deg) translateX(300px) rotate(-360deg) ;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="sun">
+    <div id="mercury" class="orbiting">
+
+    </div>
+
+    <div id="venus" class="orbiting">
+
+    </div>
+
+    <div id="earth" class="orbiting">
+
+    </div>
+
+    <div id="mars" class="orbiting">
+
+    </div>
+
+    <div id="jupiter" class="orbiting">
+
+    </div>
+
+    <div id="saturn" class="orbiting">
+
+    </div>
+    
+    <div id="uranus" class="orbiting">
+
+    </div>
+
+    <div id="neptune" class="orbiting">
+
+    </div>
+  </div>
+</body>
+</html>
