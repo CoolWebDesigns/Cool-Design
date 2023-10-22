@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Summer</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center  ;
+      background: rgb(0, 255, 255) ;
+      height: 100vh ;
+      overflow: hidden ;
+      font-family: Arial, Helvetica, sans-serif ;
+    }
+
+    #container {
+      position: relative ;
+      display: flex ;
+      flex: 1 ;
+      align-items: center ;
+      justify-content: center ;
+    }
+
+    #ice-cream {
+      display: flex ;
+      flex-direction: column ;
+      align-items: center ;
+      height: 180px ;
+      width: 70px ;
+      animation: ice-cream-lemonade-move 4s infinite ease-in-out ;
+    }
+
+    @keyframes ice-cream-lemonade-move {
+      0%, 100% {
+        transform: translateY(8%) ;
+      }
+
+      50% {
+        transform: translateY(-8%) ;
+      }
+    }
+
+    #ice-cream-balls {
+      margin-bottom: 55px ;
+    }
+
+    .ice-cream-ball {
+      position: absolute ;
+      width: 40px ;
+      height: 40px ;
+      border-radius: 50% ;
+    }
+
+    #ice-cream-ball-1 {
+      top: 0 ;
+      left: 22.5% ;
+      background: rgb(69, 34, 5) ;
+    }
+
+    #ice-cream-ball-2 {
+      top: 15% ;
+      left: 0 ;
+      background: rgb(255, 220, 216) ;
+      z-index: -5 ;
+    }
+
+    #ice-cream-ball-3 {
+      top: 15% ;
+      left: 45% ;
+      background: rgb(225, 213, 0) ;
+      z-index: -5 ;
+    }
+
+    #ice-cream-cone {
+      fill: rgb(255, 184, 77) ;
+    }
+
+    #popsicle {
+      position: relative ;
+      height: 180px ;
+      width: 70px ;
+      margin: 0 50px ;
+      animation: popsicle-move 4s infinite ease-in-out ;
+    }
+
+    @keyframes popsicle-move {
+      0%, 100% {
+        transform: translateY(-8%) ;
+      }    
+
+      50% {
+        transform: translateY(8%) ;
+      }
+    }
+
+    #popsicle-top {
+      height: 30% ;
+      border-radius: 30px 30px 0 0 ;
+      background: rgb(255, 0, 0) ;
+    }
+
+    #popsicle-middle {
+      height: 20% ;
+      background: rgb(255, 255, 0) ;
+    }
+
+    #popsicle-bottom {
+      height: 25% ;
+      border-radius: 0 0 5px 5px ;
+      background: rgb(0, 255, 0) ;
+    }
+
+    #popsicle-stick {
+      position: absolute ;
+      width: 20px ;
+      height: 25% ;
+      left: 50% ;
+      transform: translate(-50%, -50%) ;
+      background: rgb(255, 196, 33) ;
+      z-index: -10 ;
+      border-radius: 0 0 5px 5px ;
+    }
+
+    #lemonade {
+      width: 120px ;
+      height: 180px ;
+      animation: ice-cream-lemonade-move 4s infinite ease-in-out ;
+    }
+
+    #lemonade-straw-div {
+      position: absolute ;
+      z-index: -100 ;
+      margin: 15px 0 0 -30px ;
+    }
+
+    #lemonade-straw {
+      transform: rotateZ(-20deg ) ;
+    }
+
+    #sun {
+      position: absolute ;
+      top: -10px ;
+      right: -30px ;
+      height: 100px ;
+      width: 100px ;
+      background: rgb(255, 255, 0) ;
+      border-radius: 50% ;
+    }
+
+    .sun-beam {
+      position: absolute ;
+      width: 50px ;
+      height: 10px ;
+      background: rgb(255, 255, 0) ;
+      border-radius: 10px ;
+    }
+
+    #sun-beam-1 {
+      top: 50px ;
+      right: 120px ;
+      transform: rotateZ(-10deg) ;
+    }
+
+    #sun-beam-2 {
+      top: 90px ;
+      right: 120px ;
+      transform: rotateZ(-25deg) ;
+    }
+
+    #sun-beam-3 {
+      top: 120px ;
+      right: 90px ;
+      transform: rotateZ(-40deg) ;
+    }
+
+    #sun-beam-4 {
+      top: 140px ;
+      right: 50px ;
+      transform: rotateZ(-70deg) ;
+    }
+
+    #sun-beam-5 {
+      top: 150px ;
+      right: 10px ;
+      transform: rotateZ(-90deg) ;
+    }
+
+    #text {
+      position: absolute ;
+      bottom: 10% ;
+      font-size: 60px ;
+      font-weight: bold ;
+      color: rgb(255, 255, 0) ;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="ice-cream">
+      <div id="ice-cream-balls">
+        <div id="ice-cream-ball-1" class="ice-cream-ball">
+
+        </div>
+
+        <div id="ice-cream-ball-2" class="ice-cream-ball">
+          
+        </div>
+
+        <div id="ice-cream-ball-3" class="ice-cream-ball">
+          
+        </div>
+      </div>
+
+      <div id="ice-cream-cone">
+        <svg width="70px" height="140px">
+          <path d="M0,0 L35,140 L70,0" />
+        </svg>
+      </div>
+    </div>
+
+    <div id="popsicle">
+      <div id="popsicle-top">
+
+      </div>
+      
+      <div id="popsicle-middle">
+
+      </div>
+
+      <div id="popsicle-bottom">
+
+      </div>
+
+      <div id="popsicle-stick">
+
+      </div>
+    </div>
+
+    <div id="lemonade">
+      <svg width="100%" height="100%" id="lemonade-straw-div">
+        <defs>
+          <pattern width="4" height="4" patternUnits="userSpaceOnUse" id="lemonade-straw-pattern">
+            <rect width="4" height="2" fill="red" />
+            <rect width="4" height="2" y="2" fill="gray" />
+          </pattern>
+        </defs>
+
+        <path d="M45,0 L45,80 L55,80 L55,0" fill="url(#lemonade-straw-pattern)" id="lemonade-straw" />
+      </svg>
+
+      <svg width="80%" height="100%">
+        <defs>
+          <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="lemonade-glass-gradient">
+            <stop offset="20%" style="stop-color: rgba(255, 255,255, 0.6)" />
+            <stop offset="20%" style="stop-color: rgb(255, 255,0)" />
+          </linearGradient>
+        </defs>
+
+        <path d="M0,40 L40,180 L56,180 L96,40" fill="url(#lemonade-glass-gradient)" id="lemonade-glass" />
+      </svg>
+    </div>
+  </div>
+
+  <div id="sun">
+    <div id="sun-beam-1" class="sun-beam">
+
+    </div>
+
+    <div id="sun-beam-2" class="sun-beam">
+      
+    </div>
+
+    <div id="sun-beam-3" class="sun-beam">
+      
+    </div>
+
+    <div id="sun-beam-4" class="sun-beam">
+      
+    </div>
+
+    <div id="sun-beam-5" class="sun-beam">
+      
+    </div>
+  </div>
+
+  <div id="text">
+    SUMMER
+  </div>
+</body>
+</html>
