@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Autumn</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      background: rgb(198, 129, 0) ;
+      height: 100vh ;
+      overflow: hidden ;
+      font-family: Arial, Helvetica, sans-serif ;
+    }
+
+    #leaves div {
+      position: absolute ;
+      width: 100px ;
+      height: 100px ;
+      transform: rotate(0deg) ;
+      animation: 7s leaf-fall ease-in ;
+      z-index: 1000 ;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3) ;
+    }
+
+    @keyframes leaf-fall {
+      100% {
+        top: 120% ;
+      }
+    }
+
+    #leaf-1 {
+      background-color: rgb(0, 183, 6) ;
+      border-radius: 0 100px ;
+      top: -40% ;
+      left: 60% ;
+    }
+
+    #leaf-2 {
+      background-color: rgb(0, 106, 4) ;
+      border-radius: 100px 0 ;
+      top: -20% ;
+      left: 30% ;
+    }
+
+    #leaf-3 {
+      background-color: rgb(0, 146, 5) ;
+      border-radius: 100px 0 ;
+      top: -30% ;
+      left: 80% ;
+    }
+
+    #leaf-4 {
+      background-color: rgb(0, 179, 6) ;
+      border-radius: 0 100px ;
+      top: -60% ;
+      left: 10% ;
+    }
+
+    #leaf-5 {
+      background-color: rgb(0, 52, 2) ;
+      border-radius: 100px 0 ;
+      top: -50% ;
+      left: 45% ;
+    }
+
+    #container {
+      display: flex ;
+      position: relative ;
+      justify-content: center ;
+      width: 100% ;
+    }
+
+    #pumpkin {
+      position: relative ;
+      width: 200px ;
+      height: 150px ;
+      background-color: rgb(255, 102, 0) ;
+      border-radius: 50% ;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7) ;
+    }
+
+    #pumpkin-face {
+      position: absolute ;
+      top: 30px ;
+      left: 30px ;
+    }
+
+    #stem {
+      position: absolute ;
+      width: 20px ;
+      height: 60px ;
+      background-color: rgb(34, 139, 34) ;
+      top: -40px ;
+      left: 90px ;
+      border-radius: 10px ;
+      transform: rotate(45deg) ;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) ;
+    }
+
+    #text {
+      position: absolute ;
+      top: 10% ;
+      left: 50% ;
+      transform: translate(-50%, -50%) ;
+      font-size: 0 ;
+      font-weight: 900 ;
+      transition: font-size 1s ;
+    }
+  </style>
+</head>
+<body>
+  <div id="leaves">
+    <div id="leaf-1">
+
+    </div>
+
+    <div id="leaf-2">
+
+    </div>
+
+    <div id="leaf-3">
+
+    </div>
+    
+    <div id="leaf-4">
+
+    </div>
+
+    <div id="leaf-5">
+
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="pumpkin">
+      <svg width="100%" height="100%" stroke-linecap="round" id="pumpkin-face">
+        <circle cx="20" cy="20" r="20" />
+
+        <circle cx="120" cy="20" r="20" />
+
+        <path d="M10,70 Q70,140 130,70" fill="black" stroke="black" />
+      </svg>
+
+      <div id="stem">
+  
+      </div>
+    </div>
+  </div>
+
+  <div id="text">
+    AUTUMN
+  </div>
+
+  <script>
+    const text = document.getElementById('text') ;
+
+    setInterval(() => {
+      text.style.fontSize = '50px' ;
+    }, 7000) ;
+  </script>
+</body>
+</html>
