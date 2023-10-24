@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Winter</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      overflow: hidden ;
+      font-family: Arial, Helvetica, sans-serif ;
+      background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 255, 255)) ;
+    }
+
+    .snowball {
+      position: absolute ;
+      border-radius: 50% ;
+      z-index: 100000 ;
+      animation: snowball-move 4s linear infinite ;
+    }
+
+    @keyframes snowball-move {
+      100% {
+        top: 120% ;
+      }
+    }
+
+    #snowball-1 {
+      top: -20% ;
+      left: 30% ;
+      background: rgb(195, 194, 194) ;
+      width: 50px ;
+      height: 50px ;
+    }
+
+    #snowball-2 {
+      top: -40% ;
+      left: 80% ;
+      background: rgb(236, 230, 230) ;
+      width: 30px ;
+      height: 30px ;
+    }
+
+    #snowball-3 {
+      top: -60% ;
+      left: 10% ;
+      background: rgb(255, 239, 239) ;
+      width: 40px ;
+      height: 40px ;
+    }
+
+    #snowball-4 {
+      top: -70% ;
+      left: 60% ;
+      background: rgb(0, 221, 255) ;
+      width: 35px ;
+      height: 35px ;
+    }
+
+    #snowball-5 {
+      top: -90% ;
+      left: 50% ;
+      background: rgb(208, 214, 215) ;
+      width: 45px ;
+      height: 45px ;
+    }
+
+    #snowman {
+      position: relative ;
+      display: flex ;
+    }
+
+    .stick {
+      z-index: 10 ;
+    }
+
+    #stick-1 {
+      margin-top: 50px ;
+      margin-right: -20px ;
+    }
+
+    #stick-2 {
+      transform: rotateZ(-90deg) ;
+      margin-top: -40px ;
+      margin-left: 70px ;
+    }
+
+    #snowman-balls {
+      z-index: 100 ;
+    }
+
+    .snowman-eye {
+      position: absolute ;
+      border-radius: 50% ;
+      z-index: 10000 ;
+    }
+
+    #snowman-eye-1 {
+      background: rgb(36, 31, 31) ;
+      width: 14px ;
+      height: 14px ;
+      top: 12px ;
+      left: 85px ;
+    }
+
+    #snowman-eye-2 {
+      background: rgb(87, 82, 82) ;
+      width: 12px ;
+      height: 12px ;
+      top: 9px ;
+      left: 115px ;
+    }
+
+    #snowman-nose {
+      position: absolute ;
+      top: 25px ;
+      left: 75px ;
+      z-index: 10000 ;
+      transform: rotateY(40deg) ;
+    }
+
+    .face-dot {
+      position: absolute ;
+      border-radius: 50% ;
+      z-index: 10000 ;
+    }
+
+    #face-dot-1 {
+      top: 40px ;
+      left: 80px ;
+      background: rgb(43, 43, 43) ;
+      width: 12px ;
+      height: 12px ;
+    }
+
+    #face-dot-2 {
+      top: 50px ;
+      left: 90px ;
+      background: rgb(71, 62, 62) ;
+      width: 10px ;
+      height: 10px ;
+    }
+
+    #face-dot-3 {
+      top: 52px ;
+      left: 103px ;
+      background: rgb(30, 25, 25) ;
+      width: 11px ;
+      height: 11px ;
+    }
+
+    #face-dot-4 {
+      top: 48px ;
+      left: 115px ;
+      background: rgb(96, 82, 82) ;
+      width: 12px ;
+      height: 12px ;
+    }
+
+    #face-dot-5 {
+      top: 42px ;
+      left: 126px ;
+      background: rgb(26, 21, 21) ;
+      width: 11px ;
+      height: 11px ;
+    }
+
+    .body-dot {
+      position: absolute ;
+      border-radius: 50% ;
+      z-index: 10000 ;
+    }
+
+    #body-dot-1 {
+      background: rgb(13, 25, 21) ;
+      width: 16px ;
+      height: 16px ;
+      top: 70px ;
+      left: 100px ;
+    }
+
+    #body-dot-2 {
+      background: rgb(71, 75, 74) ;
+      width: 14px ;
+      height: 14px ;
+      top: 86px ;
+      left: 98px ;
+    }
+
+    #body-dot-3 {
+      background: rgb(28, 31, 30) ;
+      width: 15px ;
+      height: 15px ;
+      top: 100px ;
+      left: 103px ;
+    }
+
+    #text {
+      position: absolute ;
+      bottom: 10% ;
+      font-size: 70px ;
+      font-weight: 900 ;
+      color: rgb(255, 255, 255) ;
+    }
+  </style>
+</head>
+<body>
+  <div id="snowball-1" class="snowball">
+
+  </div>
+
+  <div id="snowball-2" class="snowball">
+    
+  </div>
+
+  <div id="snowball-3" class="snowball">
+    
+  </div>
+
+  <div id="snowball-4" class="snowball">
+    
+  </div>
+
+  <div id="snowball-5" class="snowball">
+    
+  </div>
+
+  <div id="snowman">
+    <div id="stick-1" class="stick">
+      <svg width="70" height="60" fill="rgb(72, 0, 0)">
+        <path d="M0,10 L10,0 L70,50 L60,60 L40,40 L20,50 L15,42 L30,31" />
+      </svg>
+    </div>
+
+    <div id="snowman-balls">
+      <svg width="120" height="220" fill="rgb(255, 255, 255)">
+        <circle cx="60" cy="40" r="40" />
+        <circle cx="60" cy="100" r="50" />
+        <circle cx="60" cy="160" r="60" />
+      </svg>
+    </div>
+
+    <div id="stick-2" class="stick">
+      <svg width="70" height="60" fill="rgb(72, 0, 0)">
+        <path d="M0,10 L10,0 L70,50 L60,60 L40,40 L20,50 L15,42 L30,31" />
+      </svg>
+    </div>
+    
+    <div>
+      <div id="snowman-eye-1" class="snowman-eye">
+
+      </div>
+
+      <div id="snowman-eye-2" class="snowman-eye">
+        
+      </div>
+
+      <svg width="40" height="20" fill="rgb(255, 163, 43)" id="snowman-nose">
+        <path d="M0,10 L40,20 40,0" />
+      </svg>
+
+      <div id="face-dot-1" class="face-dot">
+
+      </div>
+
+      <div id="face-dot-2" class="face-dot">
+        
+      </div>
+
+      <div id="face-dot-3" class="face-dot">
+        
+      </div>
+
+      <div id="face-dot-4" class="face-dot">
+        
+      </div>
+
+      <div id="face-dot-5" class="face-dot">
+        
+      </div>
+    </div>
+
+    <div>
+      <div id="body-dot-1" class="body-dot">
+
+      </div>
+
+      <div id="body-dot-2" class="body-dot">
+        
+      </div>
+
+      <div id="body-dot-3" class="body-dot">
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="text">
+    WINTER
+  </div>
+</body>
+</html>
