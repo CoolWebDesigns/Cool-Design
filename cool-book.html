@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Book</title>
+
+  <style>
+    body {
+      display: flex ;
+      align-items: center ;
+      justify-content: center ;
+      height: 100vh ;
+      overflow: hidden ;
+      background: linear-gradient(to bottom right, rgb(0, 0, 100), rgb(100, 0, 100)) ;
+      color: rgb(255, 255, 255) ;
+      font-family: Arial, Helvetica, sans-serif ;
+    }
+
+    #book {
+      position: relative ;
+      display: flex ;
+      flex-direction: column ;
+      align-items: center ;
+      text-align: center ;
+      height: 220px ;
+      width: 160px ;
+      background: rgb(101, 29, 16) ;
+      border-radius: 5px ;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5) ;
+      animation: book-move 4s infinite ease-in-out ;
+    }
+
+    @keyframes book-move {
+      0%, 100% {
+        margin-top: 8% ;
+      }
+
+      50% {
+        margin-bottom: 8% ;
+      }
+    }
+
+    #book-name,
+    #book-author {
+      position: absolute ;
+      font-weight: bold ;
+    }
+
+    #book-name {
+      top: 15px ;
+      border: 2px solid rgb(255, 255, 255) ;
+      padding: 5px ;
+      width: 80% ;
+    }
+
+    #book-author {
+      bottom: 15px ;
+    }
+
+    .page {
+      position: absolute ;
+      background: rgb(255, 255, 255) ;
+      border-radius: 5px 0 0 5px ;
+      border: 1px solid rgb(0, 0, 0) ;
+      animation: book-move 4s infinite ease-in-out ;
+    }
+
+    #page-1 {
+      left: 36.5% ;
+      height: 200px ;
+      width: 20px ;
+    }
+
+    #page-2 {
+      left: 37% ;
+      height: 210px ;
+      width: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-1" class="page">
+
+  </div>
+
+  <div id="page-2" class="page">
+    
+  </div>
+
+  <div id="book">
+    <span id="book-name">
+      YOU <br> SHOULD SUBSCRIBE
+    </span>
+
+    <span id="book-author">
+      BY <br> CoolWebDesigns
+    </span>
+  </div>
+</body>
+</html>
